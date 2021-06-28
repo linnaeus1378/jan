@@ -1,0 +1,35 @@
+##
+# A simple "Login form" plugin that demonstrates "Frontend authorization"
+#
+'Flowpack.Neos.FrontendLogin:LoginForm':
+  superTypes:
+    'Neos.Neos:Plugin': true
+  ui:
+    label: i18n
+    icon: 'icon-key'
+    inspector:
+      groups:
+        pluginSettings:
+          label: i18n
+
+  properties:
+    redirectAfterLogin:
+      type: reference
+      ui:
+        label: i18n
+        reloadIfChanged: false
+        inspector:
+          group: pluginSettings
+          editorOptions:
+            nodeTypes:
+              - 'Neos.Neos:Document'
+    redirectAfterLogout:
+      type: reference
+      ui:
+        label: i18n
+        reloadIfChanged: false
+        inspector:
+          group: pluginSettings
+          editorOptions:
+            nodeTypes:
+              - 'Neos.Neos:Document'

@@ -1,0 +1,69 @@
+prototype(Neos.Seo:RobotsTxt) < prototype(Neos.Fusion:Component) {
+    // Every entry gets a line in the robots.txt
+    data = Neos.Fusion:DataStructure {
+        userAgentAll = 'User-agent: *'
+        userAgentAll.@position = 'start'
+        disallowNeos = 'Disallow: /neos/'
+        disallowNeos.@position = 'after userAgentAll'
+    }
+    renderXMLSitemapLinks = true
+    languageDimension = 'language'
+    dimensionsPresets = ${Configuration.setting('Neos.Seo.robotsTxt.dimensionsPresets')}
+    excludedDimensionPresets = ${Configuration.setting('Neos.Seo.robotsTxt.excludedDimensionsPresets')}
+    linebreak = ${String.chr(10)}
+
+    renderer = Neos.Fusion:Component {
+        sitemaps = Neos.Fusion:Case {
+            @if.shouldRender = ${props.renderXMLSitemapLinks}
+            hasLanguage {
+                condition = ${Configuration.setting('Neos.ContentRepository.contentDimensions.' + props.languageDimension) != null}
+                renderer = Neos.Fusion:Loop {
+                    items = Neos.Neos:DimensionsMenuItems {
+                        dimension = ${props.languageDimension}
+                        presets = ${Type.isArray(props.dimensionsPresets) ? props.dimensionsPresets : null}
+                        includeAllPresets = true
+                    }
+                    itemRenderer = Neos.Neos:NodeUri {
+                        absolute = true
+                        format = 'xml.sitemap'
+                        node = ${item.node}
+                        @process.prefix = ${'Sitemap: ' + value + props.linebreak}
+                        @if.notExcluded = ${!props.excludedDimensionPresets || Array.indexOf(props.excludedDimensionPresets, item.dimensions[props.languageDimension][0]) == -1}
+                    }
+                }
+            }
+            noLanguage {
+                condition = true
+                renderer = Neos.Neos:NodeUri {
+                    absolute = true
+                    format = 'xml.sitemap'
+                    node = ${site}
+                    @process.prefix = ${'Sitemap: ' + value}
+                }
+            }
+        }
+
+        data = ${props.data}
+        linebreak = ${props.linebreak}
+
+        renderer = Neos.Fusion:Http.Message {
+            httpResponseHead.headers.Content-Type = 'text/plain;'
+            body = afx`
+                <Neos.Fusion:Loop items={props.data}>
+                    {item}{props.linebreak}
+                </Neos.Fusion:Loop>
+                {props.sitemaps}
+            `
+        }
+    }
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier.identifier = 'robots.txt'
+    }
+}
+
+root.robotsTxt {
+    condition = ${request.format == 'txt.robots'}
+    renderer = Neos.Seo:RobotsTxt
+}

@@ -1,0 +1,38 @@
+privilegeTargets:
+
+  'Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege':
+
+    'Flowpack.Neos.FrontendLogin:LoginForm':
+      matcher: 'method(Neos\Flow\Security\Authentication\Controller\AbstractAuthenticationController->(?!initialize).*Action()) || method(Flowpack\Neos\FrontendLogin\Controller\AuthenticationController->(?!initialize).*Action())'
+    'Flowpack.Neos.FrontendLogin:Module':
+      matcher: 'method(Flowpack\Neos\FrontendLogin\Controller\ModuleController->(?!initialize).*Action())'
+
+  'Neos\Neos\Security\Authorization\Privilege\ModulePrivilege':
+    'Flowpack.Neos.FrontendLogin:Backend.Module.Management.User':
+      matcher: 'management/frontenduser'
+
+roles:
+
+  'Neos.Flow:Everybody':
+    privileges:
+      -
+        # Grant any user access to the FrontendLoginLoginForm plugin
+        privilegeTarget: 'Flowpack.Neos.FrontendLogin:LoginForm'
+        permission: GRANT
+
+  'Flowpack.Neos.FrontendLogin:User':
+    privileges: []
+
+  'Neos.Neos:Administrator':
+    privileges:
+      - privilegeTarget: 'Flowpack.Neos.FrontendLogin:Backend.Module.Management.User'
+        permission: GRANT
+      - privilegeTarget: 'Flowpack.Neos.FrontendLogin:Module'
+        permission: GRANT
+
+  'Flowpack.Neos.FrontendLogin:UserAdministrator':
+    privileges:
+      - privilegeTarget: 'Flowpack.Neos.FrontendLogin:Backend.Module.Management.User'
+        permission: GRANT
+      - privilegeTarget: 'Flowpack.Neos.FrontendLogin:Module'
+        permission: GRANT

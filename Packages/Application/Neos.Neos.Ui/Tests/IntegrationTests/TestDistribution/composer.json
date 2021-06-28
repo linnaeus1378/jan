@@ -1,0 +1,32 @@
+
+{
+    "name": "neos/test-distribution",
+    "description": "Neos test distribution. Change this number if you need to break CircleCI's cache: 14",
+    "config": {
+        "vendor-dir": "Packages/Libraries",
+        "bin-dir": "bin"
+    },
+    "require": {
+      "neos/neos-ui": "~7.1.0",
+      "neos/fusion-afx": "*",
+      "neos/test-site": "@dev",
+      "neos/test-nodetypes": "@dev"
+    },
+    "require-dev": {
+      "neos/buildessentials": "@dev",
+      "mikey179/vfsstream": "^1.6",
+      "phpunit/phpunit": "^8.1"
+    },
+    "repositories": {
+        "distribution": {
+            "type": "path",
+            "url": "./DistributionPackages/*"
+        }
+    },
+    "scripts": {
+        "post-update-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+        "post-install-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+        "post-package-update": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
+        "post-package-install": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall"
+    }
+}

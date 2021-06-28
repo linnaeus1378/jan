@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="" product-name="Neos.Seo" source-language="en" datatype="plaintext" target-language="zh-CN">
+    <body>
+      <trans-unit id="groups.seometa" xml:space="preserve">
+				<source>Meta Tags</source>
+			<target state="translated">Meta 标签</target></trans-unit>
+      <trans-unit id="properties.metaDescription" xml:space="preserve">
+				<source>Description</source>
+			<target state="translated">说明</target></trans-unit>
+      <trans-unit id="properties.metaDescription.textAreaEditor.placeholder" xml:space="preserve">
+				<source>max. 156 characters</source>
+			<target state="translated">最多 156 字符</target></trans-unit>
+      <trans-unit id="properties.metaKeywords" xml:space="preserve">
+				<source>Keywords</source>
+			<target state="translated">关键字</target></trans-unit>
+      <trans-unit id="properties.metaKeywords.textAreaEditor.placeholder" xml:space="preserve">
+				<source>comma separated, max. 255 chars</source>
+			<target state="translated">以逗号分隔，最多 255 字符</target></trans-unit>
+      <trans-unit id="properties.metaRobotsNoindex" xml:space="preserve">
+				<source>Hide from search engines (noindex)</source>
+			<target state="translated">从搜索引擎 (noindex) 隐藏</target></trans-unit>
+      <trans-unit id="properties.metaRobotsNofollow" xml:space="preserve">
+				<source>Do not follow links (nofollow)</source>
+			<target state="translated">不跟随链接 (nofollow)</target></trans-unit>
+    </body>
+  </file>
+</xliff>

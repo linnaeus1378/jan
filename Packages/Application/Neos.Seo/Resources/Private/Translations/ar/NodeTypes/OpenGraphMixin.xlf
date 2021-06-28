@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="" product-name="Neos.Seo" source-language="en" datatype="plaintext" target-language="ar">
+    <body>
+      <trans-unit id="groups.openGraph" xml:space="preserve">
+				<source>OpenGraph</source>
+			<target state="translated">فتح الرسم البياني</target></trans-unit>
+      <trans-unit id="properties.openGraphType" xml:space="preserve">
+				<source>Open Graph Type</source>
+			<target state="translated">فتح نوع الرسم البياني</target></trans-unit>
+      <trans-unit id="properties.openGraphType.selectBoxEditor.placeholder" xml:space="preserve">
+				<source>Website</source>
+			<target state="translated">موقع الكتروني</target></trans-unit>
+      <trans-unit id="properties.openGraphType.selectBoxEditor.values.website" xml:space="preserve">
+				<source>Website</source>
+			<target state="translated">موقع الكتروني</target></trans-unit>
+      <trans-unit id="properties.openGraphType.selectBoxEditor.values.article" xml:space="preserve">
+				<source>Article</source>
+			<target state="translated">مقال</target></trans-unit>
+      <trans-unit id="properties.openGraphTitle" xml:space="preserve">
+				<source>Open Graph title</source>
+			<target state="translated">فتح عنوان الرسم البياني</target></trans-unit>
+      <trans-unit id="properties.openGraphDescription" xml:space="preserve">
+				<source>Open Graph Description</source>
+			<target state="translated">فتح وصف الرسم البياني</target></trans-unit>
+      <trans-unit id="properties.openGraphDescription.textAreaEditor.placeholder" xml:space="preserve">
+				<source>max. 200 characters</source>
+			<target state="translated">الحد الأقصى ٢٠٠ حرف</target></trans-unit>
+      <trans-unit id="properties.openGraphImage" xml:space="preserve">
+				<source>Open Graph Image</source>
+			<target state="translated">فتح صورة الرسم البياني</target></trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,21 @@
+//
+// Component animations
+// --------------------------------------------------
+
+.neos-fade {
+  opacity: 0;
+  transition: opacity 0.15s linear;
+  &.neos-in {
+    opacity: 1;
+  }
+}
+
+.neos-collapse {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+  &.neos-in {
+    height: auto;
+  }
+}

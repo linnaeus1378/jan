@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextArea/> should render correctly. 1`] = `
+<clickOutside(TextArea)
+  theme={
+    Object {
+      "textArea": "textAreaClassName",
+      "textArea--disabled": "disabledClassName",
+    }
+  }
+>
+  <TextArea
+    expandedRows={6}
+    minRows={2}
+    theme={
+      Object {
+        "textArea": "textAreaClassName",
+        "textArea--disabled": "disabledClassName",
+      }
+    }
+  >
+    <ForwardRef(TextareaAutosize)
+      aria-disabled="false"
+      aria-multiline="true"
+      className="textAreaClassName"
+      minRows={2}
+      onChange={[Function]}
+      onClick={[Function]}
+      role="textbox"
+    >
+      <textarea
+        aria-disabled="false"
+        aria-multiline="true"
+        className="textAreaClassName"
+        onChange={[Function]}
+        onClick={[Function]}
+        role="textbox"
+      />
+    </ForwardRef(TextareaAutosize)>
+  </TextArea>
+</clickOutside(TextArea)>
+`;

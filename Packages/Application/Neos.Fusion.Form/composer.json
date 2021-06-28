@@ -1,0 +1,43 @@
+{
+    "name": "neos/fusion-form",
+    "type": "neos-package",
+    "description": "Fusion Form",
+    "license": [
+        "GPL-3.0-or-later"
+    ],
+    "require": {
+        "php" : ">7.2",
+        "neos/flow": "^6.0 || ^7.0 || dev-master",
+        "neos/fusion": "^5.0 || ^7.0 || dev-master",
+        "neos/fusion-afx": "^1.2 || ^7.0 || dev-master",
+        "neos/utility-arrays": "*",
+        "neos/utility-objecthandling": "*",
+        "guzzlehttp/psr7": "^1.4 || ~2.0"
+    },
+    "require-dev": {
+        "neos/swiftmailer": "*",
+        "phpunit/phpunit": "^7.1 || ^8.0 || ^9.0",
+        "phpstan/phpstan": "^0.12.78"
+    },
+    "suggest": {
+        "neos/swiftmailer": "Required for the Neos.Fusion.Form.Runtime:Email action to work"
+    },
+    "autoload": {
+        "psr-4": {
+            "Neos\\Fusion\\Form\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Neos\\Fusion\\Form\\Tests\\": "Tests"
+        }
+    },
+    "extra": {
+    },
+    "scripts": {
+        "test:functional": ["vendor/bin/phpunit Tests/Functional"],
+        "test:unit": ["vendor/bin/phpunit Tests/Unit"],
+        "test:stan": ["vendor/bin/phpstan analyse -l 8 Classes"],
+        "test": ["composer install", "composer test:functional", "composer test:unit" ,"composer  test:stan"]
+    }
+}

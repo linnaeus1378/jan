@@ -1,0 +1,34 @@
+prototype(Neos.Seo:CanonicalLink) < prototype(Neos.Fusion:Tag) {
+    tagName = 'link'
+    attributes {
+        rel = 'canonical'
+        href = Neos.Fusion:Component {
+            node = ${documentNode}
+            canonicalLink = ${q(this.node).property('canonicalLink')}
+
+            renderer = Neos.Fusion:Case {
+                node {
+                    condition = ${Neos.Link.hasSupportedScheme(props.canonicalLink)}
+                    renderer = Neos.Neos:NodeUri {
+                        node = ${Neos.Link.convertUriToObject(props.canonicalLink, props.node)}
+                        absolute = true
+                    }
+                }
+
+                external {
+                    condition = ${!String.isBlank(props.canonicalLink)}
+                    renderer = ${props.canonicalLink}
+                }
+
+                default {
+                    condition = true
+                    renderer = Neos.Neos:NodeUri {
+                        node = ${props.node}
+                        absolute = true
+                    }
+                }
+            }
+        }
+    }
+    @if.hideIfNoIndexIsSet = ${q(node).property('metaRobotsNoindex') || q(node).is('[instanceof Neos.Seo:NoindexMixin]') ? false : true}
+}

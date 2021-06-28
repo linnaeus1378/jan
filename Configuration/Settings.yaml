@@ -1,0 +1,12 @@
+
+Neos:
+  Imagine:
+    driver: Gmagick
+  Flow:
+    persistence:
+      backendOptions:
+        driver: pdo_mysql
+        dbname: jan
+        user: root
+        password: db
+        host: db

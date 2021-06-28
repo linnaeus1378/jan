@@ -1,0 +1,53 @@
+{
+  "name": "neos.redirecthandler.ui",
+  "version": "1.0.0",
+  "description": "React UI for managing redirects in Neos CMS",
+  "license": "GNU GPLv3",
+  "author": "Contributors of the Neos Project - www.neos.io",
+  "private": true,
+  "main": "Resources/Public/JavaScript/main.bundle.js",
+  "scripts": {
+    "watch": "parcel watch Resources/Private/JavaScript/index.tsx --public-url . --out-dir Resources/Public/Assets -o main.bundle.js",
+    "build": "parcel build Resources/Private/JavaScript/index.tsx --public-url . --out-dir Resources/Public/Assets -o main.bundle.js",
+    "lint": "eslint Resources/Private/JavaScript/**/* && stylelint Resources/Private/Styles/**/*.scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neos/redirecthandler-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/neos/redirecthandler-ui/issues"
+  },
+  "homepage": "https://github.com/neos/redirecthandler-ui#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@neos-project/eslint-config-neos": "^2.2.0",
+    "@types/react": "^16.9.13",
+    "@types/react-datepicker": "^2.9.5",
+    "@types/react-dom": "^16.9.4",
+    "@typescript-eslint/eslint-plugin": "^2.9.0",
+    "@typescript-eslint/parser": "^2.9.0",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.7.1",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^1.19.1",
+    "sass-loader": "^8.0.0",
+    "source-map-loader": "^0.2.4",
+    "stylelint": "^12.0.0",
+    "stylelint-config-recommended-scss": "^4.1.0",
+    "stylelint-prettier": "^1.1.1",
+    "stylelint-scss": "^3.13.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-datepicker": "^2.10.1",
+    "react-dom": "^16.12.0"
+  }
+}

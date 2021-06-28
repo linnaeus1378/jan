@@ -1,0 +1,56 @@
+.dropDown {
+    max-width: 296px;
+    width: auto;
+}
+.dropDown__header {
+    background-color: transparent;
+}
+.dropDown__contents {
+    width: fit-content;
+    min-width: 100%;
+    padding: 0 2px 2px 2px !important;
+    background-color: var(--colors-ContrastDarker) !important;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+}
+.dropDown__btnIcon {
+    margin-right: .5em;
+}
+.dimensionCategory {
+    background-color: var(--colors-ContrastDarkest);
+    padding: var(--spacing-Full);
+}
+
+.dimensionCategory + .dimensionCategory {
+    padding-top: 0;
+}
+
+.cancelButton {
+    margin-right: var(--spacing-Quarter) !important;
+}
+
+.dimensionLabel {
+    padding-top: var(--spacing-Half);
+    padding-bottom: var(--spacing-Quarter);
+}
+
+.buttonGroup {
+    display: flex;
+    padding: var(--spacing-Half);
+}
+
+.buttonGroup button {
+    flex: 1 0 auto;
+}
+@media only screen and (max-width: 1024px) {
+    .selectPresetLabel {
+        display: none;
+    }
+}
+
+.dimmed {
+    filter: opacity(50%);
+}
+
+.selectPreset + .selectPreset {
+    margin-left: var(--spacing-Half);
+}

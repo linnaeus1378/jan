@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="" product-name="Neos.Seo" source-language="en" datatype="plaintext" target-language="ar">
+    <body>
+      <trans-unit id="groups.seometa" xml:space="preserve">
+				<source>Meta Tags</source>
+			<target state="needs-translation">Meta Tags</target></trans-unit>
+      <trans-unit id="properties.metaDescription" xml:space="preserve">
+				<source>Description</source>
+			<target state="translated">الوصف</target></trans-unit>
+      <trans-unit id="properties.metaDescription.textAreaEditor.placeholder" xml:space="preserve">
+				<source>max. 156 characters</source>
+			<target state="translated">الحد الأقصى 156 حرف</target></trans-unit>
+      <trans-unit id="properties.metaKeywords" xml:space="preserve">
+				<source>Keywords</source>
+			<target state="translated">كلمات مفتاحية</target></trans-unit>
+      <trans-unit id="properties.metaKeywords.textAreaEditor.placeholder" xml:space="preserve">
+				<source>comma separated, max. 255 chars</source>
+			<target state="translated">مفصول بفاصلة، ٢٥٥ حرف كحد أقصى</target></trans-unit>
+      <trans-unit id="properties.metaRobotsNoindex" xml:space="preserve">
+				<source>Hide from search engines (noindex)</source>
+			<target state="translated">إخفاء من محركات البحث (noindex)</target></trans-unit>
+      <trans-unit id="properties.metaRobotsNofollow" xml:space="preserve">
+				<source>Do not follow links (nofollow)</source>
+			<target state="translated">لا تتبع الروابط (nofollow)</target></trans-unit>
+    </body>
+  </file>
+</xliff>

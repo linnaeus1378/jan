@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="" product-name="Neos.Seo" source-language="en" datatype="plaintext" target-language="km">
+    <body>
+      <trans-unit id="groups.openGraph" xml:space="preserve" approved="yes">
+				<source>OpenGraph</source>
+			<target state="final">បើកដ្យាក្រាម</target></trans-unit>
+      <trans-unit id="properties.openGraphType" xml:space="preserve" approved="yes">
+				<source>Open Graph Type</source>
+			<target state="final">បើកជាប្រភេទក្រាប</target></trans-unit>
+      <trans-unit id="properties.openGraphType.selectBoxEditor.placeholder" xml:space="preserve">
+				<source>Website</source>
+			<target state="needs-translation">Website</target></trans-unit>
+      <trans-unit id="properties.openGraphType.selectBoxEditor.values.website" xml:space="preserve">
+				<source>Website</source>
+			<target state="needs-translation">Website</target></trans-unit>
+      <trans-unit id="properties.openGraphType.selectBoxEditor.values.article" xml:space="preserve">
+				<source>Article</source>
+			<target state="needs-translation">Article</target></trans-unit>
+      <trans-unit id="properties.openGraphTitle" xml:space="preserve" approved="yes">
+				<source>Open Graph title</source>
+			<target state="final">បើកចំណងជើងដ្យាក្រាម</target></trans-unit>
+      <trans-unit id="properties.openGraphDescription" xml:space="preserve" approved="yes">
+				<source>Open Graph Description</source>
+			<target state="final">បើកការបរិយាយអំពីដ្រាក្រាម</target></trans-unit>
+      <trans-unit id="properties.openGraphDescription.textAreaEditor.placeholder" xml:space="preserve" approved="yes">
+				<source>max. 200 characters</source>
+			<target state="final">អតិបរមា ២០០​ តួអក្សរ</target></trans-unit>
+      <trans-unit id="properties.openGraphImage" xml:space="preserve" approved="yes">
+				<source>Open Graph Image</source>
+			<target state="final">បើករូបភាពក្រាហ្វ</target></trans-unit>
+    </body>
+  </file>
+</xliff>

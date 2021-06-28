@@ -1,0 +1,29 @@
+##
+# Backend
+
+-
+  name:  'Backend'
+  uriPattern: 'neos/<BackendSubRoutes>'
+  defaults:
+    '@package':    'Neos.Neos.Ui'
+    '@action':     'index'
+    '@format':     'html'
+  subRoutes:
+    'BackendSubRoutes':
+      package: 'Neos.Neos.Ui'
+      suffix:  'Backend'
+
+##
+# Service
+
+-
+  name:  'Backend'
+  uriPattern: 'neos/ui-services/<ServiceSubRoutes>'
+  defaults:
+    '@package':    'Neos.Neos.Ui'
+    '@action':     'index'
+    '@format':     'html'
+  subRoutes:
+    'ServiceSubRoutes':
+      package: 'Neos.Neos.Ui'
+      suffix:  'Service'

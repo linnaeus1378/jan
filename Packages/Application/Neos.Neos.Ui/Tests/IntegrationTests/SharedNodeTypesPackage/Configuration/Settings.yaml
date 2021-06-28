@@ -1,0 +1,11 @@
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        Neos.TestNodeTypes: true
+    nodeTypes:
+      groups:
+        selectBoxes:
+          label: 'SelectBoxes'
+          position: 300
+          collapsed: false
